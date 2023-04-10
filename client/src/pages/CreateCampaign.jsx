@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CreateCampaigns = () => {
+const CreateCampaign = () => {
   return (
     <div>CreateCampaigns</div>
   )
 }
 
-export default CreateCampaigns
+export default CreateCampaign
