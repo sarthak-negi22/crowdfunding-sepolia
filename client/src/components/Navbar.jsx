@@ -39,7 +39,6 @@ const Navbar = () => {
             <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain"/>
           </div>
         </Link>
-
       </div>
 
       {/* small screen navigation */}
@@ -94,7 +93,6 @@ const Navbar = () => {
                 else 'connect()'
            }}
         />
-
             </div>
           </div>
       </div>
