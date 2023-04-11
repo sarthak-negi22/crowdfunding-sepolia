@@ -86,10 +86,10 @@ export const StateContextProvider = ({ children }) =>{
                 contract,
                 connect,
                 createCampaign: publishCampaign,
-                // getCampaigns,
-                // getUserCampaigns,
-                // donate,
-                // getDonations
+                getCampaigns,
+                getUserCampaigns,
+                donate,
+                getDonations
 
             }}
 

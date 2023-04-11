@@ -7,7 +7,6 @@ import { useStateContext } from '../context';
 
 const Navbar = () => {
 
-  // const address = "0xasb";
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState('dashboard');
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -22,13 +21,14 @@ const Navbar = () => {
           <img src={search} alt="search" className="w-[15px] h-[15px] object-contain"/>
 
         </div>
+
       </div>
       <div className="sm:flex hidden flex-row justify-end gap-4">
         <CustomButton
           btnType= "button"
-          title = { address ? 'Create a Campaign' : 'Connect Wallet' }
-          styles = { address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
-          handleClick={() => {
+          title={address ? 'Create a Campaign' : 'Connect'}
+          styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfb]'}
+          handleClick= {() => {
             if(address) navigate('create-campaign')
             else connect()
           }}
@@ -39,10 +39,11 @@ const Navbar = () => {
             <img src={thirdweb} alt="user" className="w-[60%] h-[60%] object-contain"/>
           </div>
         </Link>
+
       </div>
 
       {/* small screen navigation */}
- 
+
       <div className="sm:hidden flex justify-between items-center relative">
       <div className="w-[40px] h-[40px] rounded-[10px]] bg-[#2c2f32] flex justify-center items-center cursor-pointer">
             <img src={logo} alt="user" className="w-[60%] h-[60%] object-contain"/>
@@ -68,10 +69,12 @@ const Navbar = () => {
                     navigate(Link.link)
                   }}
                 >
+
                   <img
                     src= {Link.imgUrl}
                     alt= {Link.name}
                     className={`w-[24px] h-[24px] object-contain ${isActive === Link.name ? 'grayscale-0' : 'grayscale'}`}
+                  
                   />
 
                   <p className={`ml-[20px] font-epilogue font-semibold text-[14px] ${isActive === Link.name ? 'text-[#1dc071]' : 'text-[#808191]'}`}>
@@ -85,16 +88,19 @@ const Navbar = () => {
 
             <div className="flex mx-4">
             <CustomButton
-             btnType= "button"
-            title={address ? 'Create a Campaign' : 'Connect'}
-            styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfb]'}
-            handleClick= {() => {
-                if(address) navigate('create-campaign')
-                else connect()
-           }}
+          btnType= "button"
+          title={address ? 'Create a Campaign' : 'Connect'}
+          styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfb]'}
+          handleClick= {() => {
+            if(address) navigate('create-campaign')
+            else connect()
+          }}
         />
+
             </div>
+
           </div>
+
       </div>
     </div>
   )

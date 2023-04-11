@@ -9,7 +9,7 @@ import './index.css'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-    <ThirdwebProvider activeChain="mumbai">
+    <ThirdwebProvider activeChain = "mumbai">
         <Router>
             <StateContextProvider>
                  <App/>
